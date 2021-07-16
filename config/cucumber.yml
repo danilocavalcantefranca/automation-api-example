@@ -2,9 +2,9 @@
 <% REPORT_JSON = "/opt/reports/cucumber_ci.json"%>
 
 automation-api-example-stg: --color --format pretty ENVIRONMENT=STAGING
-automation-api-example-report: -p 99-server-corporate-stg --format html --out <%=REPORT_NAME%> SCREENSHOTSTEP=1 REPORT_NAME=<%= REPORT_NAME %>
-automation-api-example-ci: -p 99-server-corporate-stg --format json --out <%=REPORT_JSON%> REPORT_JSON=<%= REPORT_JSON %>
+automation-api-example-report: -p automation-api-example-stg --format html --out <%=REPORT_NAME%> SCREENSHOTSTEP=1 REPORT_NAME=<%= REPORT_NAME %>
+automation-api-example-ci: -p automation-api-example-stg --format json --out <%=REPORT_JSON%> REPORT_JSON=<%= REPORT_JSON %>
 
 automation-api-example-prd: --color --format pretty ENVIRONMENT=PRODUCAO
-automation-api-example-report: -p 99-server-corporate-prd --format html --out <%=REPORT_NAME%> SCREENSHOTSTEP=1 REPORT_NAME=<%= REPORT_NAME %>
-automation-api-example-ci: -p 99-server-corporate-prd --format json --out <%=REPORT_JSON%> REPORT_JSON=<%= REPORT_JSON %>
+automation-api-example-report: -p automation-api-example-prd --format html --out <%=REPORT_NAME%> SCREENSHOTSTEP=1 REPORT_NAME=<%= REPORT_NAME %>
+automation-api-example-ci: -p automation-api-example-prd --format json --out <%=REPORT_JSON%> REPORT_JSON=<%= REPORT_JSON %>
