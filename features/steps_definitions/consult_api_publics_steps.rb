@@ -3,7 +3,7 @@ Dado('que consulto o endpoint que retorna todas as apis públicas') do
 end
 
 Quando('validar o retorno do endpoint validando as apis que são do {string}') do |desired_api|
-  @return_apis_throught_text_sent = []
+  @return_apis_throught_text_sent = Array.new
   @return_consult_api['entries'].size.times{|count| @return_apis_throught_text_sent << @return_consult_api['entries'][count] if @return_consult_api['entries'][count]['API'].upcase.include? (desired_api.upcase)}
 end
 
